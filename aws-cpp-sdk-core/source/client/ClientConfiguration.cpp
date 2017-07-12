@@ -31,9 +31,10 @@ static const char* CLIENT_CONFIGURATION_ALLOCATION_TAG = "ClientConfiguration";
 
 static Aws::String ComputeUserAgentString()
 {
-  Aws::StringStream ss;
-  ss << "aws-sdk-cpp/" << Version::GetVersionString() << " " <<  Aws::OSVersionInfo::ComputeOSVersionString();
-  return ss.str();
+  // Aws::StringStream ss;
+  // ss << "aws-sdk-cpp/" << Version::GetVersionString() << " " <<  Aws::OSVersionInfo::ComputeOSVersionString();
+  // return ss.str();
+  return "aws-sdk-cpp/snitch";
 }
 
 ClientConfiguration::ClientConfiguration() : 
