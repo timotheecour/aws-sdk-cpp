@@ -236,6 +236,7 @@ endmacro()
 
 macro(apply_post_project_platform_settings)
     set(SDK_INSTALL_BINARY_PREFIX "${SDK_INSTALL_BINARY_PREFIX}/${ANDROID_ABI}")
+    set(SDK_INSTALL_BINARY_PREFIX "") # snitch
 
     set(PLATFORM_DEP_LIBS log atomic)
     set(PLATFORM_DEP_LIBS_ABSTRACT_NAME log atomic)

@@ -1,7 +1,6 @@
 
 message(STATUS "Generating linux build config")
 set(SDK_INSTALL_BINARY_PREFIX "linux")
-
 if(SIMPLE_INSTALL)
     include(CMakePackageConfigHelpers)
 
@@ -24,8 +23,10 @@ macro(apply_post_project_platform_settings)
     else()
         set(SDK_INSTALL_BINARY_PREFIX "${SDK_INSTALL_BINARY_PREFIX}/ia32")
     endif()
+    set(SDK_INSTALL_BINARY_PREFIX "") # snitch
 
     set(PLATFORM_DEP_LIBS pthread)
     set(PLATFORM_DEP_LIBS_ABSTRACT_NAME pthread)
 
 endmacro()
+
